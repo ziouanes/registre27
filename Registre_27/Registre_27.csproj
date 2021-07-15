@@ -91,6 +91,7 @@
     <Compile Include="cas.Designer.cs">
       <DependentUpon>cas.cs</DependentUpon>
     </Compile>
+    <Compile Include="classCas.cs" />
     <Compile Include="Classhokm.cs" />
     <Compile Include="ClassMahkama.cs" />
     <Compile Include="ClassPerson.cs" />
@@ -137,6 +138,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\cas.datasource" />
+    <None Include="Properties\DataSources\classCas.datasource" />
+    <None Include="Properties\DataSources\Classhokm.datasource" />
+    <None Include="Properties\DataSources\ClassMahkama.datasource" />
+    <None Include="Properties\DataSources\ClassPerson.datasource" />
     <None Include="Properties\DataSources\Person.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -164,6 +170,9 @@
     <PackageReference Include="Dapper">
       <Version>1.50.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="~vs620B.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

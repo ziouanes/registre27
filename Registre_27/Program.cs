@@ -41,7 +41,7 @@ namespace Registre_27
         }
 
 
-        public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = dossierMarcher ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets = True;");
+        public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = lawsuits ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets = True;");
 
 
 

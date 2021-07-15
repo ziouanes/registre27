@@ -34,6 +34,9 @@ namespace Registre_27
             this.date1.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.date1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             select_Person();
+            select_Mahkama();
+            select_hokm();
+
         }
 
         private void cas_Load(object sender, EventArgs e)
@@ -62,12 +65,12 @@ namespace Registre_27
 
 
                 string query = $"select id , nom from Person ";
-                personBindingSource.DataSource = Program.sql_con.Query<ClassPerson>(query, commandType: CommandType.Text);
+                classPersonBindingSource.DataSource = Program.sql_con.Query<ClassPerson>(query, commandType: CommandType.Text);
 
 
-                per1.Properties.PopulateColumns();
-                per1.Properties.Columns[0].Visible = false;
-               
+                //per1.Properties.PopulateColumns();
+                //per1.Properties.Columns[1].Visible = false;
+
 
             }
             catch (Exception ex)
@@ -80,7 +83,74 @@ namespace Registre_27
             }
         }
 
-            private void addper(object sender, EventArgs e)
+        private void select_Mahkama()
+        {
+
+            try
+            {
+
+                //stepProgressBar1.SelectedItemIndex = -1;
+
+                if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+
+
+
+
+
+                string query = $"select id , mahkama from Mahkama ";
+                classMahkamaBindingSource.DataSource = Program.sql_con.Query<ClassMahkama>(query, commandType: CommandType.Text);
+
+
+                //per1.Properties.PopulateColumns();
+                //per1.Properties.Columns[1].Visible = false;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //this.Dispose();
+            }
+        }
+
+        private void select_hokm()
+        {
+
+            try
+            {
+
+                //stepProgressBar1.SelectedItemIndex = -1;
+
+                if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+
+
+
+
+
+                string query = $"select id , mahkama from hokm ";
+                classhokmBindingSource.DataSource = Program.sql_con.Query<Classhokm>(query, commandType: CommandType.Text);
+
+
+                //per1.Properties.PopulateColumns();
+                //per1.Properties.Columns[1].Visible = false;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //this.Dispose();
+            }
+        }
+
+
+        private void addper(object sender, EventArgs e)
         {
             Person person = new Person();
             person.ShowDialog();

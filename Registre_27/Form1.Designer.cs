@@ -37,37 +37,42 @@ namespace Registre_27
             // 
             // pdfViewer1
             // 
-            this.pdfViewer1.Location = new System.Drawing.Point(70, 70);
+            this.pdfViewer1.Location = new System.Drawing.Point(105, 102);
+            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(1044, 444);
+            this.pdfViewer1.Size = new System.Drawing.Size(1566, 649);
             this.pdfViewer1.TabIndex = 0;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(84, 24);
+            this.simpleButton1.Location = new System.Drawing.Point(126, 35);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(167, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(250, 34);
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "show";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(798, 24);
+            this.simpleButton2.Location = new System.Drawing.Point(1197, 35);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(157, 23);
+            this.simpleButton2.Size = new System.Drawing.Size(236, 34);
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "import";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 585);
+            this.ClientSize = new System.Drawing.Size(1618, 855);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.pdfViewer1);
+            this.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
