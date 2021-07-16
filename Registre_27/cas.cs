@@ -17,7 +17,53 @@ namespace Registre_27
 {
     public partial class cas : DevExpress.XtraEditors.XtraForm
     {
-        private int id;
+        private int id = 0;
+        private string _nom = "";
+        private string _hokm = "";
+        private string _mahkama = "";
+
+        public cas(int id , string numero, DateTime date_cas ,string description ,string prix , string note  , string afterhokm , string pername , string mahkama , string hokm)
+        {
+
+            InitializeComponent();
+            select_Person();
+            select_Mahkama();
+            select_hokm();
+
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
+            CultureInfo dateUICulture = new CultureInfo("fr-FR");
+            date1.Properties.CalendarDateTimeFormatInfo = dateUICulture.DateTimeFormat;
+            date1.Properties.DisplayFormat.Format = dateUICulture.DateTimeFormat;
+            this.date1.Properties.EditFormat.Format = dateUICulture.DateTimeFormat;
+            this.date1.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.date1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.date1.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.date1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+
+
+            this.id = id;
+            this.number1.Text = numero;
+            DateTime dt = date_cas;
+            this.description.Text = description;
+            this.prix.Text = prix;
+            this.note.Text = note;
+            this.finish.Text = afterhokm;
+            this._nom = pername;
+            this._mahkama = mahkama;
+            this._hokm = hokm;
+
+
+
+            if (id != 0)
+            {
+                date1.EditValue = dt;
+            }
+
+
+
+        }
+
 
         public cas()
         {
@@ -43,11 +89,27 @@ namespace Registre_27
         {
             per1.Properties.Buttons[1].Click += addper;
 
-
             //this.date1.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
             //this.date1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             //this.date1.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             //this.date1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+
+            if (id != 0)
+            {
+                hokm.SelectedText = _hokm;
+                hokm.ForeColor = Color.Red;
+            }
+            if (id != 0)
+            {
+                per1.Text = _nom;
+                per1.ForeColor = Color.Red;
+            }
+
+            if (id != 0)
+            {
+                mahkama1.Text = _mahkama;
+                mahkama1.ForeColor = Color.Red;
+            }
         }
 
         private void select_Person()
@@ -69,8 +131,9 @@ namespace Registre_27
 
 
                 //per1.Properties.PopulateColumns();
-                //per1.Properties.Columns[1].Visible = false;
+                //per1.Properties.Columns["id"].Visible = false;
 
+              
 
             }
             catch (Exception ex)
@@ -103,7 +166,7 @@ namespace Registre_27
 
                 //per1.Properties.PopulateColumns();
                 //per1.Properties.Columns[1].Visible = false;
-
+               
 
             }
             catch (Exception ex)
@@ -136,7 +199,7 @@ namespace Registre_27
 
                 //per1.Properties.PopulateColumns();
                 //per1.Properties.Columns[1].Visible = false;
-
+               
 
             }
             catch (Exception ex)
@@ -192,7 +255,7 @@ namespace Registre_27
                         {
                           
 
-                            string sql = "insert into [cas]([numero] ,[date_cas],[_description],[prix],[note],[afterhokm] , [Person_id]  ,[mahkama]  ,[hokm]  ) VALUES(@numero,@date_cas,@_description , @prix , @prix ,@note , @afterhokm ,@Person_id ,@mahkama ,@hokm  )";
+                            string sql = "insert into [cas]([numero] ,[date_cas],[_description],[prix],[note],[afterhokm] , [Person_id]  ,[mahkama]  ,[hokm]  ) VALUES(@numero,@date_cas,@_description , @prix  ,@note , @afterhokm ,@Person_id ,@mahkama ,@hokm  )";
 
 
                             Program.sql_cmd = new SqlCommand(sql, Program.sql_con);

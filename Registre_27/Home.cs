@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using Dapper;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors.Mask;
+using System.Globalization;
 
 namespace Registre_27
 {
@@ -33,8 +36,11 @@ namespace Registre_27
 
         private void Home_Load(object sender, EventArgs e)
         {
+            select_cas();
 
         }
+
+
         private void select_cas()
         {
 
@@ -50,11 +56,19 @@ namespace Registre_27
 
 
                 string query = $"select c.id ,  c.numero , p.nom ,  c.date_cas , m.mahkama , c._description , c.prix , c.afterhokm , c.note , h.mahkama as 'hokm'   from cas c inner join Person p on c.Person_id = p.id inner join Mahkama m on m.id = c.mahkama  inner join hokm h on h.id = c.hokm";
-              //  classPersonBindingSource.DataSource = Program.sql_con.Query<ClassPerson>(query, commandType: CommandType.Text);
+                classCasBindingSource1.DataSource = Program.sql_con.Query<classCas>(query, commandType: CommandType.Text);
 
 
-                //per1.Properties.PopulateColumns();
-                //per1.Properties.Columns[1].Visible = false;
+
+                //holy scrypt
+                CultureInfo dateUICulture = new CultureInfo("fr-FR");
+                repositoryItemDateEdit1.Properties.CalendarDateTimeFormatInfo = dateUICulture.DateTimeFormat;
+                repositoryItemDateEdit1.Properties.DisplayFormat.Format = dateUICulture.DateTimeFormat;
+                this.repositoryItemDateEdit1.Properties.EditFormat.Format = dateUICulture.DateTimeFormat;
+
+                //repositoryItemDateEdit1.Mask.MaskType = MaskType.DateTime;
+                //repositoryItemDateEdit1.Mask.EditMask = "dd-MM-yyyy";
+                //repositoryItemDateEdit1.Mask.UseMaskAsDisplayFormat = true;
 
 
             }
@@ -73,6 +87,53 @@ namespace Registre_27
         {
             cas cas = new cas();
             cas.ShowDialog();
+            select_cas();
+        }
+
+        private void gridControl1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Right) return;
+            var rowM = gridView1.FocusedRowHandle;
+
+
+           
+
+                
+                    popupMenuitem.ShowPopup(barManager1, new Point(MousePosition.X, MousePosition.Y));
+             
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var row2 = gridView1.FocusedRowHandle;
+            int cellid;
+           
+
+
+            cellid = int.Parse(gridView1.GetRowCellValue(row2, "id").ToString());
+         string   cellnumero = gridView1.GetRowCellValue(row2, "numero").ToString();
+         DateTime   celldate_cas = Convert.ToDateTime(gridView1.GetRowCellValue(row2, "date_cas"));
+         string   celldescription = gridView1.GetRowCellValue(row2, "_description").ToString();
+         string   cellprix = gridView1.GetRowCellValue(row2, "prix").ToString();
+         string   cellnote = gridView1.GetRowCellValue(row2, "note").ToString();
+         string   cellafterhokm = gridView1.GetRowCellValue(row2, "afterhokm").ToString();
+         string   cellpername = gridView1.GetRowCellValue(row2, "nom").ToString();
+         string   cellmahkama = gridView1.GetRowCellValue(row2, "mahkama").ToString();
+         string cellhokm = gridView1.GetRowCellValue(row2, "hokm").ToString();
+
+
+
+            cas cas = new cas(cellid, cellnumero, celldate_cas, celldescription, cellprix, cellnote , cellafterhokm , cellpername , cellmahkama , cellhokm);
+            cas.ShowDialog();
+            select_cas();
+
+        }
+
+        private void barButtonattachement_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Attachement attachement = new Attachement();
+            attachement.ShowDialog();
+
         }
     }
 }

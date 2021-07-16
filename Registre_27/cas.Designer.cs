@@ -114,10 +114,9 @@ namespace Registre_27
             // 
             this.panelControl1.Controls.Add(this.windowsUIButtonPanelMain);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 335);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl1.Location = new System.Drawing.Point(0, 229);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1224, 91);
+            this.panelControl1.Size = new System.Drawing.Size(816, 62);
             this.panelControl1.TabIndex = 0;
             // 
             // windowsUIButtonPanelMain
@@ -148,11 +147,11 @@ namespace Registre_27
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
             this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(2, 2);
-            this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 88);
-            this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(90, 88);
+            this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 60);
+            this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(60, 60);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(1220, 88);
+            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(812, 60);
             this.windowsUIButtonPanelMain.TabIndex = 6;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
@@ -172,85 +171,86 @@ namespace Registre_27
             this.layoutControl1.Controls.Add(this.finish);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(950, 149, 650, 400);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1224, 335);
+            this.layoutControl1.Size = new System.Drawing.Size(816, 229);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // description
             // 
-            this.description.Location = new System.Drawing.Point(153, 148);
-            this.description.Margin = new System.Windows.Forms.Padding(4);
+            this.description.Location = new System.Drawing.Point(104, 106);
             this.description.Name = "description";
             this.description.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.description.Properties.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.description.Properties.ShowIcon = false;
-            this.description.Size = new System.Drawing.Size(1047, 26);
+            this.description.Size = new System.Drawing.Size(696, 20);
             this.description.StyleController = this.layoutControl1;
             this.description.TabIndex = 19;
             // 
             // note
             // 
-            this.note.Location = new System.Drawing.Point(153, 199);
-            this.note.Margin = new System.Windows.Forms.Padding(4);
+            this.note.Location = new System.Drawing.Point(104, 141);
             this.note.Name = "note";
             this.note.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.note.Properties.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.note.Properties.ShowIcon = false;
-            this.note.Size = new System.Drawing.Size(496, 26);
+            this.note.Size = new System.Drawing.Size(329, 20);
             this.note.StyleController = this.layoutControl1;
             this.note.TabIndex = 18;
             // 
             // number1
             // 
-            this.number1.Location = new System.Drawing.Point(153, 95);
-            this.number1.Margin = new System.Windows.Forms.Padding(4);
+            this.number1.Location = new System.Drawing.Point(104, 69);
             this.number1.Name = "number1";
-            this.number1.Size = new System.Drawing.Size(419, 26);
+            this.number1.Size = new System.Drawing.Size(278, 20);
             this.number1.StyleController = this.layoutControl1;
             this.number1.TabIndex = 6;
             // 
             // per1
             // 
-            this.per1.Location = new System.Drawing.Point(153, 45);
-            this.per1.Margin = new System.Windows.Forms.Padding(4);
+            this.per1.Location = new System.Drawing.Point(104, 37);
             this.per1.Name = "per1";
             this.per1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.per1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id", "id", 36, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("nom", "nom", 42, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.per1.Properties.DataSource = this.classPersonBindingSource;
             this.per1.Properties.DisplayMember = "nom";
             this.per1.Properties.NullText = "";
+            this.per1.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.per1.Properties.ValueMember = "id";
-            this.per1.Size = new System.Drawing.Size(419, 26);
+            this.per1.Size = new System.Drawing.Size(278, 20);
             this.per1.StyleController = this.layoutControl1;
             this.per1.TabIndex = 4;
             // 
             // mahkama1
             // 
-            this.mahkama1.Location = new System.Drawing.Point(781, 45);
-            this.mahkama1.Margin = new System.Windows.Forms.Padding(4);
+            this.mahkama1.Location = new System.Drawing.Point(523, 37);
             this.mahkama1.Name = "mahkama1";
             this.mahkama1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.mahkama1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id", "id", 36, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("mahkama", "mahkama", 79, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.mahkama1.Properties.DataSource = this.classMahkamaBindingSource;
             this.mahkama1.Properties.DisplayMember = "mahkama";
             this.mahkama1.Properties.NullText = "";
+            this.mahkama1.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.mahkama1.Properties.ValueMember = "id";
-            this.mahkama1.Size = new System.Drawing.Size(419, 26);
+            this.mahkama1.Size = new System.Drawing.Size(277, 20);
             this.mahkama1.StyleController = this.layoutControl1;
             this.mahkama1.TabIndex = 5;
             // 
             // date1
             // 
             this.date1.EditValue = null;
-            this.date1.Location = new System.Drawing.Point(781, 95);
-            this.date1.Margin = new System.Windows.Forms.Padding(4);
+            this.date1.Location = new System.Drawing.Point(523, 69);
             this.date1.Name = "date1";
             this.date1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -262,42 +262,43 @@ namespace Registre_27
             this.date1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.date1.Properties.Mask.EditMask = "";
             this.date1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.date1.Size = new System.Drawing.Size(419, 26);
+            this.date1.Size = new System.Drawing.Size(277, 20);
             this.date1.StyleController = this.layoutControl1;
             this.date1.TabIndex = 7;
             // 
             // hokm
             // 
-            this.hokm.Location = new System.Drawing.Point(782, 285);
-            this.hokm.Margin = new System.Windows.Forms.Padding(4);
+            this.hokm.Location = new System.Drawing.Point(523, 193);
             this.hokm.Name = "hokm";
             this.hokm.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.hokm.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id", "id", 36, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("mahkama", "الحكم", 79, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.hokm.Properties.DataSource = this.classhokmBindingSource;
             this.hokm.Properties.DisplayMember = "mahkama";
             this.hokm.Properties.NullText = "";
+            this.hokm.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.hokm.Properties.ValueMember = "id";
-            this.hokm.Size = new System.Drawing.Size(418, 26);
+            this.hokm.Size = new System.Drawing.Size(277, 20);
             this.hokm.StyleController = this.layoutControl1;
             this.hokm.TabIndex = 7;
             // 
             // prix
             // 
-            this.prix.Location = new System.Drawing.Point(153, 285);
-            this.prix.Margin = new System.Windows.Forms.Padding(4);
+            this.prix.Location = new System.Drawing.Point(104, 193);
             this.prix.Name = "prix";
-            this.prix.Size = new System.Drawing.Size(496, 26);
+            this.prix.Size = new System.Drawing.Size(329, 20);
             this.prix.StyleController = this.layoutControl1;
             this.prix.TabIndex = 7;
             // 
             // finish
             // 
-            this.finish.Location = new System.Drawing.Point(782, 199);
-            this.finish.Margin = new System.Windows.Forms.Padding(4);
+            this.finish.Location = new System.Drawing.Point(523, 141);
             this.finish.Name = "finish";
             this.finish.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.finish.Size = new System.Drawing.Size(418, 26);
+            this.finish.Size = new System.Drawing.Size(277, 20);
             this.finish.StyleController = this.layoutControl1;
             this.finish.TabIndex = 5;
             // 
@@ -308,7 +309,7 @@ namespace Registre_27
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1224, 335);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(816, 229);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -332,7 +333,7 @@ namespace Registre_27
             this.layoutControlItem5});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1204, 315);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(802, 215);
             this.layoutControlGroup2.Text = "Group";
             // 
             // person
@@ -342,54 +343,54 @@ namespace Registre_27
             this.person.CustomizationFormText = "layoutControlItem1";
             this.person.Location = new System.Drawing.Point(0, 0);
             this.person.Name = "person";
-            this.person.Size = new System.Drawing.Size(552, 30);
+            this.person.Size = new System.Drawing.Size(368, 22);
             this.person.Text = "المدعي : ";
             this.person.TextLocation = DevExpress.Utils.Locations.Left;
-            this.person.TextSize = new System.Drawing.Size(126, 19);
+            this.person.TextSize = new System.Drawing.Size(86, 13);
             // 
             // mahkama
             // 
             this.mahkama.Control = this.mahkama1;
             this.mahkama.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.mahkama.CustomizationFormText = "layoutControlItem2";
-            this.mahkama.Location = new System.Drawing.Point(628, 0);
+            this.mahkama.Location = new System.Drawing.Point(419, 0);
             this.mahkama.Name = "mahkama";
-            this.mahkama.Size = new System.Drawing.Size(552, 30);
+            this.mahkama.Size = new System.Drawing.Size(367, 22);
             this.mahkama.Text = "المحكمة :  ";
             this.mahkama.TextLocation = DevExpress.Utils.Locations.Left;
-            this.mahkama.TextSize = new System.Drawing.Size(126, 19);
+            this.mahkama.TextSize = new System.Drawing.Size(86, 13);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.number1;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 32);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(552, 30);
+            this.layoutControlItem3.Size = new System.Drawing.Size(368, 22);
             this.layoutControlItem3.Text = "رقم الملف :";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Left;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(126, 19);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(86, 13);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.date1;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(628, 50);
+            this.layoutControlItem4.Location = new System.Drawing.Point(419, 32);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(552, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(367, 22);
             this.layoutControlItem4.Text = "تاريخ رفع الدعوى : ";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Left;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(126, 19);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(86, 13);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(552, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(368, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(76, 80);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(51, 54);
             this.emptySpaceItem2.Text = "emptySpaceItem1";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -397,9 +398,9 @@ namespace Registre_27
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 30);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 22);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(552, 20);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(368, 10);
             this.emptySpaceItem3.Text = "emptySpaceItem2";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -407,18 +408,18 @@ namespace Registre_27
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(628, 30);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(419, 22);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(552, 20);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(367, 10);
             this.emptySpaceItem4.Text = "emptySpaceItem3";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 80);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 54);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(1180, 23);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(786, 15);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
@@ -426,32 +427,32 @@ namespace Registre_27
             this.layoutControlItem6.Control = this.finish;
             this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem6.Location = new System.Drawing.Point(629, 154);
+            this.layoutControlItem6.Location = new System.Drawing.Point(419, 104);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(551, 30);
+            this.layoutControlItem6.Size = new System.Drawing.Size(367, 22);
             this.layoutControlItem6.Text = "المآل : ";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Left;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(126, 19);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(86, 13);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.hokm;
             this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem8.Location = new System.Drawing.Point(629, 240);
+            this.layoutControlItem8.Location = new System.Drawing.Point(419, 156);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(551, 30);
+            this.layoutControlItem8.Size = new System.Drawing.Size(367, 22);
             this.layoutControlItem8.Text = "الحكم : ";
             this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Left;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(126, 19);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(86, 13);
             // 
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 184);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 126);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(629, 56);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(419, 30);
             this.emptySpaceItem7.Text = "emptySpaceItem1";
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -459,9 +460,9 @@ namespace Registre_27
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
             this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem9.Location = new System.Drawing.Point(629, 184);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(419, 126);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(551, 56);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(367, 30);
             this.emptySpaceItem9.Text = "emptySpaceItem3";
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -469,41 +470,41 @@ namespace Registre_27
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 133);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 91);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(1180, 21);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(786, 13);
             this.emptySpaceItem6.Text = "emptySpaceItem1";
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.note;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 154);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 104);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(629, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(419, 22);
             this.layoutControlItem2.Text = "ملاحظات : ";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(126, 19);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(86, 13);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.description;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 103);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 69);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1180, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(786, 22);
             this.layoutControlItem1.Text = "موضوع الدعوى : ";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(126, 19);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(86, 13);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.prix;
             this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 240);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 156);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(629, 30);
+            this.layoutControlItem5.Size = new System.Drawing.Size(419, 22);
             this.layoutControlItem5.Text = "مبلغ التعويض : ";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Left;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(126, 19);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(86, 13);
             // 
             // toastNotificationsManager1
             // 
@@ -515,13 +516,12 @@ namespace Registre_27
             // 
             // cas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 426);
+            this.ClientSize = new System.Drawing.Size(816, 291);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.panelControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cas.IconOptions.SvgImage")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "cas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "إظافة قضية";

@@ -85,12 +85,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attachement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attachement.Designer.cs">
+      <DependentUpon>Attachement.cs</DependentUpon>
+    </Compile>
     <Compile Include="cas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="cas.Designer.cs">
       <DependentUpon>cas.cs</DependentUpon>
     </Compile>
+    <Compile Include="classAtachement.cs" />
     <Compile Include="classCas.cs" />
     <Compile Include="Classhokm.cs" />
     <Compile Include="ClassMahkama.cs" />
@@ -115,6 +122,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Attachement.resx">
+      <DependentUpon>Attachement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cas.resx">
       <DependentUpon>cas.cs</DependentUpon>
     </EmbeddedResource>

@@ -32,7 +32,6 @@ namespace Registre_27
                  string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
 
-                openFileDialog1.Filter = "Excel files (*.xls or *.xlsx)|*.xls;*.xlsx";
                 openFileDialog1.InitialDirectory = filePath;
                 openFileDialog1.Filter = "pdf files (*.pdf) | *.pdf";
 
