@@ -252,5 +252,61 @@ namespace Registre_27
             //MessageBox.Show(filePath + @"\Regincase\" + id_case + @"\" + _name + "");
             pdfViewer1.LoadDocument(filePath + @"\Regincase\" + id_case + @"\" + _name + "");
         }
+
+        private void barButtondelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            var row3 = gridView1.FocusedRowHandle;
+            string cellid;
+            cellid = gridView1.GetRowCellValue(row3, "id").ToString();
+            string _name;
+
+
+
+            _name = (gridView1.GetRowCellValue(row3, "_name").ToString());
+            if (MessageBox.Show("تأكيد الحذف من قائمة المرفقات    ?", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+
+
+                    using (SqlCommand deleteCommand = new SqlCommand("delete from  atachement where id = @id", Program.sql_con))
+                    {
+
+
+                        if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+
+                        deleteCommand.Parameters.AddWithValue("@id", int.Parse(cellid));
+
+                        deleteCommand.ExecuteNonQuery();
+
+
+
+                    }
+
+                    select_attachement();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    //this.Dispose();
+                }
+                // Use a try block to catch IOExceptions, to
+                // handle the case of the file already being
+                // opened by another process.
+                try
+                {
+                    System.IO.File.Delete(filePath + @"\Regincase\" + id_case + @"\" + _name + "");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+            }
+        }
     }
 }

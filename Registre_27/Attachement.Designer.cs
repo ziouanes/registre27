@@ -49,8 +49,8 @@ namespace Registre_27
             this.barButtonopen = new DevExpress.XtraBars.BarButtonItem();
             this.barButtondelete = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.pdfViewer1 = new DevExpress.XtraPdfViewer.PdfViewer();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.pdfViewer1 = new DevExpress.XtraPdfViewer.PdfViewer();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.classAtachementBindingSource1)).BeginInit();
@@ -94,23 +94,22 @@ namespace Registre_27
             // panel1
             // 
             this.panel1.Controls.Add(this.gridControl1);
-            this.panel1.Controls.Add(this.pdfViewer1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1326, 606);
+            this.panel1.Size = new System.Drawing.Size(1326, 234);
             this.panel1.TabIndex = 2;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.classAtachementBindingSource1;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1326, 200);
+            this.gridControl1.Size = new System.Drawing.Size(1326, 234);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -126,6 +125,7 @@ namespace Registre_27
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsHint.ShowCellHints = false;
+            this.gridView1.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyUp);
             // 
             // colid
@@ -212,22 +212,13 @@ namespace Registre_27
             this.barButtondelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtondelete.ImageOptions.Image")));
             this.barButtondelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtondelete.ImageOptions.LargeImage")));
             this.barButtondelete.Name = "barButtondelete";
+            this.barButtondelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtondelete_ItemClick);
             // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "dd";
             this.barButtonItem1.Id = 2;
             this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // pdfViewer1
-            // 
-            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pdfViewer1.Location = new System.Drawing.Point(0, 260);
-            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4);
-            this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(1326, 346);
-            this.pdfViewer1.TabIndex = 2;
-            this.pdfViewer1.Load += new System.EventHandler(this.pdfViewer1_Load);
             // 
             // popupMenu1
             // 
@@ -237,11 +228,21 @@ namespace Registre_27
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // pdfViewer1
+            // 
+            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 234);
+            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4);
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.Size = new System.Drawing.Size(1326, 372);
+            this.pdfViewer1.TabIndex = 7;
+            // 
             // Attachement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1326, 669);
+            this.Controls.Add(this.pdfViewer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -273,7 +274,6 @@ namespace Registre_27
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraPdfViewer.PdfViewer pdfViewer1;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -290,5 +290,6 @@ namespace Registre_27
         private DevExpress.XtraGrid.Columns.GridColumn colcas;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraPdfViewer.PdfViewer pdfViewer1;
     }
 }
