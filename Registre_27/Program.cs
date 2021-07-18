@@ -41,8 +41,11 @@ namespace Registre_27
         }
 
 
-        public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = lawsuits ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets = True;");
+        //   public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = lawsuits ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets = True;");
 
+
+
+   public static SqlConnection sql_con = new SqlConnection("Data Source=AANDROID-123122;Initial Catalog=lawsuits;Integrated Security=True;MultipleActiveResultSets = True;");
 
 
         internal static SqlCommand sql_cmd;

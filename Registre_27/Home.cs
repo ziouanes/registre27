@@ -131,7 +131,14 @@ namespace Registre_27
 
         private void barButtonattachement_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Attachement attachement = new Attachement();
+            var row2 = gridView1.FocusedRowHandle;
+            int cellid;
+
+
+
+            cellid = int.Parse(gridView1.GetRowCellValue(row2, "id").ToString());
+
+            Attachement attachement = new Attachement(cellid);
             attachement.ShowDialog();
 
         }

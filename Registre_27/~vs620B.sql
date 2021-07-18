@@ -1,10 +1,11 @@
 ﻿create database lawsuits
 
+drop database lawsuits
+
 go
 
 use lawsuits
 
-drop table cas
 
 create table Person(id int primary key  identity(1,1), nom ntext)
 
@@ -19,6 +20,8 @@ create table atachement(id int primary key identity(1,1) ,_name ntext   , cas in
 create table cas(id int  identity(1,1) , numero ntext  , date_cas date , _description ntext , prix varchar(30) , note ntext ,  afterhokm ntext ,   Person_id int foreign key references Person(id) on delete cascade on update cascade , mahkama int foreign key references Mahkama(id) on delete cascade on update cascade ,  hokm int foreign key references hokm(id) on delete cascade on update cascade , deleted int default 0  )
 
 
+
+insert into atachement values('ddd', 2)
 
 
  USE master;

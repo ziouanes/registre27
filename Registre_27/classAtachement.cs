@@ -9,7 +9,7 @@ namespace Registre_27
    public class classAtachement
     {
         public int id { get; set; }
-        public string name { get; set; }
+        public string _name { get; set; }
         public int cas { get; set; }
     }
 }
