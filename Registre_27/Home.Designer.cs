@@ -43,7 +43,7 @@ namespace Registre_27
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtondelete = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonattachement = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemetat = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -108,8 +108,9 @@ namespace Registre_27
             this.barButtonItem1,
             this.barButtondelete,
             this.barButtonattachement,
-            this.barButtonItem4});
+            this.barButtonItemetat});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl.MaxItemId = 51;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
@@ -118,9 +119,10 @@ namespace Registre_27
             this.ribbonPage1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(1079, 158);
+            this.ribbonControl.Size = new System.Drawing.Size(1618, 182);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            this.ribbonControl.Click += new System.EventHandler(this.ribbonControl_Click);
             // 
             // skinRibbonGalleryBarItem
             // 
@@ -182,26 +184,28 @@ namespace Registre_27
             // 
             this.barButtondelete.Caption = "إزالة";
             this.barButtondelete.Id = 48;
-            this.barButtondelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtondelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtondelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtondelete.ImageOptions.Image")));
+            this.barButtondelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtondelete.ImageOptions.LargeImage")));
             this.barButtondelete.Name = "barButtondelete";
+            this.barButtondelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtondelete_ItemClick);
             // 
             // barButtonattachement
             // 
             this.barButtonattachement.Caption = "مرفقات";
             this.barButtonattachement.Id = 49;
-            this.barButtonattachement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonattachement.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonattachement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonattachement.ImageOptions.Image")));
+            this.barButtonattachement.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonattachement.ImageOptions.LargeImage")));
             this.barButtonattachement.Name = "barButtonattachement";
             this.barButtonattachement.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonattachement_ItemClick);
             // 
-            // barButtonItem4
+            // barButtonItemetat
             // 
-            this.barButtonItem4.Caption = "الحالة";
-            this.barButtonItem4.Id = 50;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
-            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItemetat.Caption = "الحالة";
+            this.barButtonItemetat.Id = 50;
+            this.barButtonItemetat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
+            this.barButtonItemetat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.barButtonItemetat.Name = "barButtonItemetat";
+            this.barButtonItemetat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemetat_ItemClick);
             // 
             // ribbonPage
             // 
@@ -233,17 +237,19 @@ namespace Registre_27
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 577);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 849);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1079, 22);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1618, 26);
             // 
             // officeNavigationBar
             // 
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 541);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 796);
+            this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(4);
             this.officeNavigationBar.Name = "officeNavigationBar";
-            this.officeNavigationBar.Size = new System.Drawing.Size(1079, 36);
+            this.officeNavigationBar.Size = new System.Drawing.Size(1618, 53);
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
             // 
@@ -253,13 +259,14 @@ namespace Registre_27
             this.navigationFrame.Appearance.Options.UseBackColor = true;
             this.navigationFrame.Controls.Add(this.employeesNavigationPage);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame.Location = new System.Drawing.Point(0, 158);
+            this.navigationFrame.Location = new System.Drawing.Point(0, 182);
+            this.navigationFrame.Margin = new System.Windows.Forms.Padding(4);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.employeesNavigationPage});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(1079, 383);
+            this.navigationFrame.Size = new System.Drawing.Size(1618, 614);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
@@ -267,20 +274,23 @@ namespace Registre_27
             // 
             this.employeesNavigationPage.Controls.Add(this.gridControl1);
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
+            this.employeesNavigationPage.Margin = new System.Windows.Forms.Padding(4);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(1079, 383);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(1618, 614);
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.classCasBindingSource1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.MenuManager = this.ribbonControl;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemDateEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1079, 383);
+            this.gridControl1.Size = new System.Drawing.Size(1618, 614);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -303,6 +313,8 @@ namespace Registre_27
             this.colafterhokm,
             this.colnote,
             this.colhokm});
+            this.gridView1.DetailHeight = 512;
+            this.gridView1.FixedLineWidth = 3;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -311,40 +323,36 @@ namespace Registre_27
             // colid
             // 
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 13;
+            this.colid.MinWidth = 19;
             this.colid.Name = "colid";
-            this.colid.Width = 50;
             // 
             // colnumero
             // 
             this.colnumero.Caption = "رقم الملف";
             this.colnumero.FieldName = "numero";
-            this.colnumero.MinWidth = 13;
+            this.colnumero.MinWidth = 19;
             this.colnumero.Name = "colnumero";
             this.colnumero.Visible = true;
             this.colnumero.VisibleIndex = 0;
-            this.colnumero.Width = 50;
             // 
             // colnom
             // 
             this.colnom.Caption = "المدعي";
             this.colnom.FieldName = "nom";
-            this.colnom.MinWidth = 13;
+            this.colnom.MinWidth = 19;
             this.colnom.Name = "colnom";
             this.colnom.Visible = true;
             this.colnom.VisibleIndex = 1;
-            this.colnom.Width = 50;
             // 
             // coldate_cas
             // 
             this.coldate_cas.Caption = "تاريخ رفع الدعوى";
             this.coldate_cas.ColumnEdit = this.repositoryItemDateEdit1;
             this.coldate_cas.FieldName = "date_cas";
-            this.coldate_cas.MinWidth = 13;
+            this.coldate_cas.MinWidth = 19;
             this.coldate_cas.Name = "coldate_cas";
             this.coldate_cas.Visible = true;
             this.coldate_cas.VisibleIndex = 2;
-            this.coldate_cas.Width = 50;
             // 
             // repositoryItemDateEdit1
             // 
@@ -359,58 +367,52 @@ namespace Registre_27
             // 
             this.colmahkama.Caption = "المحكمة المختصة";
             this.colmahkama.FieldName = "mahkama";
-            this.colmahkama.MinWidth = 13;
+            this.colmahkama.MinWidth = 19;
             this.colmahkama.Name = "colmahkama";
             this.colmahkama.Visible = true;
             this.colmahkama.VisibleIndex = 3;
-            this.colmahkama.Width = 50;
             // 
             // col_description
             // 
             this.col_description.Caption = "موضوع الدعوى";
             this.col_description.FieldName = "_description";
-            this.col_description.MinWidth = 13;
+            this.col_description.MinWidth = 19;
             this.col_description.Name = "col_description";
             this.col_description.Visible = true;
             this.col_description.VisibleIndex = 4;
-            this.col_description.Width = 50;
             // 
             // colprix
             // 
             this.colprix.Caption = "التعويضات";
             this.colprix.FieldName = "prix";
-            this.colprix.MinWidth = 13;
+            this.colprix.MinWidth = 19;
             this.colprix.Name = "colprix";
             this.colprix.Visible = true;
             this.colprix.VisibleIndex = 5;
-            this.colprix.Width = 50;
             // 
             // colafterhokm
             // 
             this.colafterhokm.Caption = "المرحلة التي يوجد بها الملف حاليا";
             this.colafterhokm.FieldName = "afterhokm";
-            this.colafterhokm.MinWidth = 13;
+            this.colafterhokm.MinWidth = 19;
             this.colafterhokm.Name = "colafterhokm";
             this.colafterhokm.Visible = true;
             this.colafterhokm.VisibleIndex = 6;
-            this.colafterhokm.Width = 50;
             // 
             // colnote
             // 
             this.colnote.Caption = "ملاحظات";
             this.colnote.FieldName = "note";
-            this.colnote.MinWidth = 13;
+            this.colnote.MinWidth = 19;
             this.colnote.Name = "colnote";
             this.colnote.Visible = true;
             this.colnote.VisibleIndex = 7;
-            this.colnote.Width = 50;
             // 
             // colhokm
             // 
             this.colhokm.FieldName = "hokm";
-            this.colhokm.MinWidth = 13;
+            this.colhokm.MinWidth = 19;
             this.colhokm.Name = "colhokm";
-            this.colhokm.Width = 50;
             // 
             // employeesLabelControl
             // 
@@ -424,8 +426,9 @@ namespace Registre_27
             this.employeesLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
+            this.employeesLabelControl.Margin = new System.Windows.Forms.Padding(4);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(1079, 383);
+            this.employeesLabelControl.Size = new System.Drawing.Size(1618, 614);
             this.employeesLabelControl.TabIndex = 0;
             this.employeesLabelControl.Text = "Employees";
             // 
@@ -447,15 +450,17 @@ namespace Registre_27
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1079, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1618, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 599);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 875);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1079, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1618, 0);
             // 
             // barDockControlLeft
             // 
@@ -463,30 +468,32 @@ namespace Registre_27
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 599);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 875);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1079, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1618, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 599);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 875);
             // 
             // popupMenuitem
             // 
             this.popupMenuitem.ItemLinks.Add(this.barButtonItem1);
             this.popupMenuitem.ItemLinks.Add(this.barButtondelete);
-            this.popupMenuitem.ItemLinks.Add(this.barButtonItem4);
+            this.popupMenuitem.ItemLinks.Add(this.barButtonItemetat);
             this.popupMenuitem.ItemLinks.Add(this.barButtonattachement);
             this.popupMenuitem.Name = "popupMenuitem";
             this.popupMenuitem.Ribbon = this.ribbonControl;
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 599);
+            this.ClientSize = new System.Drawing.Size(1618, 875);
             this.Controls.Add(this.navigationFrame);
             this.Controls.Add(this.officeNavigationBar);
             this.Controls.Add(this.ribbonStatusBar);
@@ -496,6 +503,7 @@ namespace Registre_27
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Home.IconOptions.Image")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -560,7 +568,7 @@ namespace Registre_27
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtondelete;
         private DevExpress.XtraBars.BarButtonItem barButtonattachement;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemetat;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;

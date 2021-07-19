@@ -102,6 +102,12 @@
     <Compile Include="Classhokm.cs" />
     <Compile Include="ClassMahkama.cs" />
     <Compile Include="ClassPerson.cs" />
+    <Compile Include="Etat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat.Designer.cs">
+      <DependentUpon>Etat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cas.resx">
       <DependentUpon>cas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat.resx">
+      <DependentUpon>Etat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

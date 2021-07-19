@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.Mask;
 using System.Globalization;
+using System.Data.SqlClient;
 
 namespace Registre_27
 {
@@ -55,7 +56,7 @@ namespace Registre_27
 
 
 
-                string query = $"select c.id ,  c.numero , p.nom ,  c.date_cas , m.mahkama , c._description , c.prix , c.afterhokm , c.note , h.mahkama as 'hokm'   from cas c inner join Person p on c.Person_id = p.id inner join Mahkama m on m.id = c.mahkama  inner join hokm h on h.id = c.hokm";
+                string query = $"select c.id ,  c.numero , p.nom ,  c.date_cas , m.mahkama , c._description , c.prix , c.afterhokm , c.note , h.mahkama as 'hokm'   from cas c inner join Person p on c.Person_id = p.id inner join Mahkama m on m.id = c.mahkama  inner join hokm h on h.id = c.hokm where c.deleted = 0";
                 classCasBindingSource1.DataSource = Program.sql_con.Query<classCas>(query, commandType: CommandType.Text);
 
 
@@ -140,6 +141,73 @@ namespace Registre_27
 
             Attachement attachement = new Attachement(cellid);
             attachement.ShowDialog();
+
+        }
+
+        private void barButtondelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            var row2 = gridView1.FocusedRowHandle;
+            int cellid;
+            string numero;
+
+
+            cellid = int.Parse(gridView1.GetRowCellValue(row2, "id").ToString());
+            numero = (gridView1.GetRowCellValue(row2, "numero").ToString());
+
+            if (MessageBox.Show(  "تأكيد حذف القضية؟  "+numero, "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+
+
+                    using (SqlCommand deleteCommand = new SqlCommand("update cas set deleted = -1 where id = @id", Program.sql_con))
+                    {
+
+
+                        if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+
+                        deleteCommand.Parameters.AddWithValue("@id", int.Parse(cellid.ToString()));
+
+                        deleteCommand.ExecuteNonQuery();
+
+
+
+                    }
+
+                    select_cas();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    //this.Dispose();
+                }
+            }
+        }
+
+        private void ribbonControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItemetat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var row2 = gridView1.FocusedRowHandle;
+            int cellid;
+            string cellhokm;
+
+
+
+            cellid = int.Parse(gridView1.GetRowCellValue(row2, "id").ToString());
+            cellhokm =(gridView1.GetRowCellValue(row2, "hokm").ToString());
+
+            Etat etat = new Etat(cellid,cellhokm);
+            etat.ShowDialog();
+            select_cas();
+
 
         }
     }

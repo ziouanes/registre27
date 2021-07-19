@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using DevExpress.XtraBars.Docking2010;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,6 +61,9 @@ namespace Registre_27
                 date1.EditValue = dt;
             }
 
+            this.mahkama1.Properties.SearchMode = SearchMode.AutoComplete;
+            this.hokm.Properties.SearchMode = SearchMode.AutoComplete;
+            this.per1.Properties.SearchMode = SearchMode.AutoComplete;
 
 
         }
@@ -217,6 +221,8 @@ namespace Registre_27
         {
             Person person = new Person();
             person.ShowDialog();
+            select_Person();
+            
         }
 
         private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
@@ -300,41 +306,43 @@ namespace Registre_27
                             XtraMessageBox.Show("champs obligatoires");
 
                         }
-                        //else
-                        //{
-                        //    DateTime dtconvocation = Convert.ToDateTime(textEditconvocation.EditValue);
-                        //    DateTime dtjORNAL = Convert.ToDateTime(textEditJornal.EditValue);
-                        //    DateTime dtpORTAIL = Convert.ToDateTime(textEditportai.EditValue);
-                        //    DateTime dtop = Convert.ToDateTime(dateEditop.EditValue);
+                        else
+                        {
+                           
 
 
-                        //    string sql = "update  [publication] set [Aop]  = @Aop ,[date_jornal] =  @date_jornal ,[date_portail]  = @date_portail,[date_convocation]  = @date_convocation ,[date_op]  = @date_op where id2 = @id2";
+                            string sql = "update  [cas] set [numero]  = @numero ,[date_cas] =  @date_cas ,[_description]  = @_description,[prix]  = @prix ,[note]  = @note , [afterhokm] = @afterhokm , [Person_id] = @Person_id , [mahkama] =@mahkama , [hokm] = @hokm where id = @id";
 
 
-                        //    Program.sql_cmd = new SqlCommand(sql, Program.sql_con);
-                        //    Program.sql_cmd.Parameters.AddWithValue("@Aop", textEditAop.Text + textEditaoodate.Text);
-                        //    Program.sql_cmd.Parameters.AddWithValue("@date_jornal", dtjORNAL);
-                        //    Program.sql_cmd.Parameters.AddWithValue("@date_portail", dtpORTAIL);
-                        //    Program.sql_cmd.Parameters.AddWithValue("@date_convocation", dtconvocation);
-                        //    Program.sql_cmd.Parameters.AddWithValue("@date_op", dtop);
-                        //    Program.sql_cmd.Parameters.AddWithValue("@id2", id2);
+                            Program.sql_cmd = new SqlCommand(sql, Program.sql_con);
+                            Program.sql_cmd.Parameters.AddWithValue("@numero", number1.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@date_cas", date1.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@_description", description.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@prix", prix.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@note", note.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@afterhokm", finish.Text);
 
-
-
-
-                        //    if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
-                        //    Program.sql_cmd.ExecuteNonQuery();
-                        //    Program.sql_con.Close();
+                            Program.sql_cmd.Parameters.AddWithValue("@Person_id", per1.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@mahkama", mahkama1.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@hokm", hokm.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@id", id);
 
 
 
 
+                            if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+                            Program.sql_cmd.ExecuteNonQuery();
+                            Program.sql_con.Close();
 
-                        //    toastNotificationsManager1.ShowNotification("63e40279-d885-4efa-91fd-073fbda47ee2");
 
 
-                        //    this.Close();
-                        //}
+
+
+                           // toastNotificationsManager1.ShowNotification("63e40279-d885-4efa-91fd-073fbda47ee2");
+
+
+                            this.Close();
+                        }
 
 
                     }
