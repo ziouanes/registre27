@@ -44,6 +44,9 @@ namespace Registre_27
             this.barButtondelete = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonattachement = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemetat = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.barButtonItemprint = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -77,6 +80,7 @@ namespace Registre_27
             this.popupMenuitem = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
@@ -108,15 +112,19 @@ namespace Registre_27
             this.barButtonItem1,
             this.barButtondelete,
             this.barButtonattachement,
-            this.barButtonItemetat});
+            this.barButtonItemetat,
+            this.barEditItem1,
+            this.barButtonItemprint});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonControl.MaxItemId = 51;
+            this.ribbonControl.MaxItemId = 53;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
             this.ribbonPage1});
+            this.ribbonControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.Size = new System.Drawing.Size(1618, 182);
@@ -202,10 +210,32 @@ namespace Registre_27
             // 
             this.barButtonItemetat.Caption = "الحالة";
             this.barButtonItemetat.Id = 50;
-            this.barButtonItemetat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItemetat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.barButtonItemetat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemetat.ImageOptions.Image")));
+            this.barButtonItemetat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemetat.ImageOptions.LargeImage")));
             this.barButtonItemetat.Name = "barButtonItemetat";
             this.barButtonItemetat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemetat_ItemClick);
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "barEditItem1";
+            this.barEditItem1.Edit = this.repositoryItemLookUpEdit1;
+            this.barEditItem1.Id = 51;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            // 
+            // barButtonItemprint
+            // 
+            this.barButtonItemprint.Caption = "بطاقة حول القضية";
+            this.barButtonItemprint.Id = 52;
+            this.barButtonItemprint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemprint.ImageOptions.SvgImage")));
+            this.barButtonItemprint.Name = "barButtonItemprint";
+            this.barButtonItemprint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemprint_ItemClick);
             // 
             // ribbonPage
             // 
@@ -316,9 +346,12 @@ namespace Registre_27
             this.gridView1.DetailHeight = 512;
             this.gridView1.FixedLineWidth = 3;
             this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupCount = 1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colhokm, DevExpress.Data.ColumnSortOrder.Descending)});
             // 
             // colid
             // 
@@ -410,9 +443,13 @@ namespace Registre_27
             // 
             // colhokm
             // 
+            this.colhokm.Caption = "الأحكام";
             this.colhokm.FieldName = "hokm";
+            this.colhokm.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
             this.colhokm.MinWidth = 19;
             this.colhokm.Name = "colhokm";
+            this.colhokm.Visible = true;
+            this.colhokm.VisibleIndex = 8;
             // 
             // employeesLabelControl
             // 
@@ -486,6 +523,7 @@ namespace Registre_27
             this.popupMenuitem.ItemLinks.Add(this.barButtondelete);
             this.popupMenuitem.ItemLinks.Add(this.barButtonItemetat);
             this.popupMenuitem.ItemLinks.Add(this.barButtonattachement);
+            this.popupMenuitem.ItemLinks.Add(this.barButtonItemprint);
             this.popupMenuitem.Name = "popupMenuitem";
             this.popupMenuitem.Ribbon = this.ribbonControl;
             // 
@@ -512,6 +550,7 @@ namespace Registre_27
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).EndInit();
             this.navigationFrame.ResumeLayout(false);
@@ -575,5 +614,8 @@ namespace Registre_27
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.PopupMenu popupMenuitem;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemprint;
     }
 }

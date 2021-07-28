@@ -210,5 +210,37 @@ namespace Registre_27
 
 
         }
+
+        private void barButtonItemprint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var row2 = gridView1.FocusedRowHandle;
+            int cellid;
+
+
+
+            cellid = int.Parse(gridView1.GetRowCellValue(row2, "id").ToString());
+            string cellnumero = gridView1.GetRowCellValue(row2, "numero").ToString();
+            string celldate_cas = (gridView1.GetRowCellDisplayText(row2, "date_cas").ToString());
+            string celldescription = gridView1.GetRowCellValue(row2, "_description").ToString();
+            string cellprix = gridView1.GetRowCellValue(row2, "prix").ToString();
+            string cellnote = gridView1.GetRowCellValue(row2, "note").ToString();
+            string cellafterhokm = gridView1.GetRowCellValue(row2, "afterhokm").ToString();
+            string cellpername = gridView1.GetRowCellValue(row2, "nom").ToString();
+            string cellmahkama = gridView1.GetRowCellValue(row2, "mahkama").ToString();
+
+
+           
+
+                using (report frm = new report())
+                {
+
+
+                    frm.PrintInvoice(cellnumero, celldate_cas, celldescription, cellprix, cellnote, cellafterhokm, cellpername, cellmahkama);
+                    frm.WindowState = FormWindowState.Maximized;
+                    frm.ShowDialog();
+
+                }
+
+        }
     }
 }

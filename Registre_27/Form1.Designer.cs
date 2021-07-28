@@ -38,7 +38,7 @@ namespace Registre_27
             // pdfViewer1
             // 
             this.pdfViewer1.Location = new System.Drawing.Point(105, 102);
-            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.pdfViewer1.Name = "pdfViewer1";
             this.pdfViewer1.Size = new System.Drawing.Size(1566, 649);
             this.pdfViewer1.TabIndex = 0;
@@ -46,7 +46,7 @@ namespace Registre_27
             // simpleButton1
             // 
             this.simpleButton1.Location = new System.Drawing.Point(126, 35);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(250, 34);
             this.simpleButton1.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace Registre_27
             // simpleButton2
             // 
             this.simpleButton2.Location = new System.Drawing.Point(1197, 35);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(236, 34);
             this.simpleButton2.TabIndex = 2;
@@ -71,8 +71,7 @@ namespace Registre_27
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.pdfViewer1);
-            this.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

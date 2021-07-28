@@ -44,3 +44,7 @@ ALTER DATABASE lawsuits SET MULTI_USER;
 GO
 
 INSERT INTO Mahkama(mahkama) values(N'ااا')
+
+
+
+update  [cas] set [numero]  = @numero ,[date_cas] =  @date_cas ,[_description]  = @_description,[prix]  = @prix ,[note]  = @note , [afterhokm] = @afterhokm , [Person_id] ,@Person_id , [mahkama] =@mahkama , [hokm] = @hokm where id = @id

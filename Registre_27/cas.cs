@@ -254,7 +254,7 @@ namespace Registre_27
                     {
                         if (per1.ItemIndex == -1 || mahkama1.ItemIndex == -1 || number1.Text == "" || date1.Text == "" || description.Text == "" || note.Text == ""|| finish.Text == "" || prix.Text == "" || hokm.ItemIndex == -1)
                         {
-                            XtraMessageBox.Show("champs obligatoires");
+                            XtraMessageBox.Show("إملئ جميع الحقول");
 
                         }
                         else
@@ -303,7 +303,7 @@ namespace Registre_27
 
                         if (per1.ItemIndex == -1 || mahkama1.ItemIndex == -1 || number1.Text == "" || date1.Text == "" || description.Text == "" || note.Text == "" || finish.Text == "" || prix.Text == "" || hokm.ItemIndex == -1)
                         {
-                            XtraMessageBox.Show("champs obligatoires");
+                            XtraMessageBox.Show("إملئ جميع الحقول");
 
                         }
                         else

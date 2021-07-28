@@ -37,20 +37,22 @@ namespace Registre_27
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.number1 = new DevExpress.XtraEditors.MemoExEdit();
             this.description = new DevExpress.XtraEditors.MemoExEdit();
             this.note = new DevExpress.XtraEditors.MemoExEdit();
-            this.number1 = new DevExpress.XtraEditors.TextEdit();
             this.per1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.classPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mahkama1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.classMahkamaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.date1 = new DevExpress.XtraEditors.DateEdit();
             this.hokm = new DevExpress.XtraEditors.LookUpEdit();
+            this.classhokmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prix = new DevExpress.XtraEditors.TextEdit();
             this.finish = new DevExpress.XtraEditors.MemoExEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.person = new DevExpress.XtraLayout.LayoutControlItem();
             this.mahkama = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -64,31 +66,31 @@ namespace Registre_27
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
-            this.classPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.classMahkamaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.classhokmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.number1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.description.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.note.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.number1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.per1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classPersonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahkama1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classMahkamaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hokm.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classhokmBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prix.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.person)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahkama)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
@@ -102,10 +104,8 @@ namespace Registre_27
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classPersonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classMahkamaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classhokmBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -152,7 +152,7 @@ namespace Registre_27
             this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 88);
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(90, 88);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(90, 88);
+            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(1220, 88);
             this.windowsUIButtonPanelMain.TabIndex = 6;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
@@ -161,9 +161,9 @@ namespace Registre_27
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.number1);
             this.layoutControl1.Controls.Add(this.description);
             this.layoutControl1.Controls.Add(this.note);
-            this.layoutControl1.Controls.Add(this.number1);
             this.layoutControl1.Controls.Add(this.per1);
             this.layoutControl1.Controls.Add(this.mahkama1);
             this.layoutControl1.Controls.Add(this.date1);
@@ -180,9 +180,22 @@ namespace Registre_27
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // number1
+            // 
+            this.number1.Location = new System.Drawing.Point(153, 115);
+            this.number1.Margin = new System.Windows.Forms.Padding(4);
+            this.number1.Name = "number1";
+            this.number1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.number1.Properties.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.number1.Properties.ShowIcon = false;
+            this.number1.Size = new System.Drawing.Size(419, 26);
+            this.number1.StyleController = this.layoutControl1;
+            this.number1.TabIndex = 20;
+            // 
             // description
             // 
-            this.description.Location = new System.Drawing.Point(153, 150);
+            this.description.Location = new System.Drawing.Point(153, 165);
             this.description.Margin = new System.Windows.Forms.Padding(4);
             this.description.Name = "description";
             this.description.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -195,7 +208,7 @@ namespace Registre_27
             // 
             // note
             // 
-            this.note.Location = new System.Drawing.Point(153, 200);
+            this.note.Location = new System.Drawing.Point(153, 212);
             this.note.Margin = new System.Windows.Forms.Padding(4);
             this.note.Name = "note";
             this.note.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -205,15 +218,6 @@ namespace Registre_27
             this.note.Size = new System.Drawing.Size(496, 26);
             this.note.StyleController = this.layoutControl1;
             this.note.TabIndex = 18;
-            // 
-            // number1
-            // 
-            this.number1.Location = new System.Drawing.Point(153, 97);
-            this.number1.Margin = new System.Windows.Forms.Padding(4);
-            this.number1.Name = "number1";
-            this.number1.Size = new System.Drawing.Size(419, 26);
-            this.number1.StyleController = this.layoutControl1;
-            this.number1.TabIndex = 6;
             // 
             // per1
             // 
@@ -257,7 +261,7 @@ namespace Registre_27
             // date1
             // 
             this.date1.EditValue = null;
-            this.date1.Location = new System.Drawing.Point(781, 97);
+            this.date1.Location = new System.Drawing.Point(781, 115);
             this.date1.Margin = new System.Windows.Forms.Padding(4);
             this.date1.Name = "date1";
             this.date1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -304,7 +308,7 @@ namespace Registre_27
             // 
             // finish
             // 
-            this.finish.Location = new System.Drawing.Point(782, 200);
+            this.finish.Location = new System.Drawing.Point(782, 212);
             this.finish.Margin = new System.Windows.Forms.Padding(4);
             this.finish.Name = "finish";
             this.finish.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -328,7 +332,6 @@ namespace Registre_27
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.person,
             this.mahkama,
-            this.layoutControlItem3,
             this.layoutControlItem4,
             this.emptySpaceItem2,
             this.emptySpaceItem3,
@@ -341,7 +344,8 @@ namespace Registre_27
             this.emptySpaceItem6,
             this.layoutControlItem2,
             this.layoutControlItem1,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem7});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(1204, 314);
@@ -371,24 +375,12 @@ namespace Registre_27
             this.mahkama.TextLocation = DevExpress.Utils.Locations.Left;
             this.mahkama.TextSize = new System.Drawing.Size(126, 19);
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.number1;
-            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 52);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(552, 30);
-            this.layoutControlItem3.Text = "رقم الملف :";
-            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Left;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(126, 19);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.date1;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(628, 52);
+            this.layoutControlItem4.Location = new System.Drawing.Point(628, 70);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(552, 30);
             this.layoutControlItem4.Text = "تاريخ رفع الدعوى : ";
@@ -401,7 +393,7 @@ namespace Registre_27
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem2.Location = new System.Drawing.Point(552, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(76, 82);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(76, 100);
             this.emptySpaceItem2.Text = "emptySpaceItem1";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -411,7 +403,7 @@ namespace Registre_27
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 30);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(552, 22);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(552, 40);
             this.emptySpaceItem3.Text = "emptySpaceItem2";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -421,16 +413,16 @@ namespace Registre_27
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem4.Location = new System.Drawing.Point(628, 30);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(552, 22);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(552, 40);
             this.emptySpaceItem4.Text = "emptySpaceItem3";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 82);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 100);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(1180, 23);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(1180, 20);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
@@ -438,7 +430,7 @@ namespace Registre_27
             this.layoutControlItem6.Control = this.finish;
             this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem6.Location = new System.Drawing.Point(629, 155);
+            this.layoutControlItem6.Location = new System.Drawing.Point(629, 167);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(551, 30);
             this.layoutControlItem6.Text = "المآل : ";
@@ -461,9 +453,9 @@ namespace Registre_27
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 185);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 197);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(629, 54);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(629, 42);
             this.emptySpaceItem7.Text = "emptySpaceItem1";
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -471,9 +463,9 @@ namespace Registre_27
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
             this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem9.Location = new System.Drawing.Point(629, 185);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(629, 197);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(551, 54);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(551, 42);
             this.emptySpaceItem9.Text = "emptySpaceItem3";
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -481,16 +473,16 @@ namespace Registre_27
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 135);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 150);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(1180, 20);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(1180, 17);
             this.emptySpaceItem6.Text = "emptySpaceItem1";
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.note;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 155);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 167);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(629, 30);
             this.layoutControlItem2.Text = "ملاحظات : ";
@@ -499,7 +491,7 @@ namespace Registre_27
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.description;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 105);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(1180, 30);
             this.layoutControlItem1.Text = "موضوع الدعوى : ";
@@ -516,6 +508,15 @@ namespace Registre_27
             this.layoutControlItem5.Text = "مبلغ التعويض : ";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(126, 19);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.number1;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 70);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(552, 30);
+            this.layoutControlItem7.Text = "رقم الملف :";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(126, 19);
             // 
             // toastNotificationsManager1
             // 
@@ -542,21 +543,23 @@ namespace Registre_27
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.number1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.description.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.note.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.number1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.per1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classPersonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahkama1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classMahkamaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hokm.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classhokmBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prix.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.person)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahkama)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
@@ -570,10 +573,8 @@ namespace Registre_27
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classPersonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classMahkamaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classhokmBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -585,12 +586,10 @@ namespace Registre_27
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelMain;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.TextEdit number1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem person;
         private DevExpress.XtraLayout.LayoutControlItem mahkama;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
@@ -618,5 +617,7 @@ namespace Registre_27
         private System.Windows.Forms.BindingSource personBindingSource1;
         private System.Windows.Forms.BindingSource classMahkamaBindingSource;
         private System.Windows.Forms.BindingSource classhokmBindingSource;
+        private DevExpress.XtraEditors.MemoExEdit number1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }
